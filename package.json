@@ -1,13 +1,22 @@
 {
   "name": "@symblight/toolset",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "toolset",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
+    "prepare": "npm run build",
+    "version": "node scripts/updateVersion.js",
     "test": "jest --watchAll"
   },
-  "keywords": [],
+  "keywords": [
+    "js",
+    "helper",
+    "tools",
+    "object",
+    "array"
+  ],
   "author": "symblight@gmail.com",
   "license": "ISC",
   "repository": {
@@ -17,6 +26,7 @@
   "dependencies": {
     "@types/jest": "^26.0.14",
     "rfdc": "^1.1.4",
+    "shelljs": "^0.8.4",
     "typescript": "^4.0.3"
   },
   "devDependencies": {

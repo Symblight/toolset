@@ -65,9 +65,9 @@ export default {
           ...pkg,
           version: version.toolset,
           name: '@symblight/toolset',
-          main: './common.js',
-          module: './index.js',
-          types: './index.d.ts',
+          main: 'dist/common.js',
+          module: 'dist/index.js',
+          types: 'dist/index.d.ts',
           private: true,
           keywords: ['library'],
           engines: {
