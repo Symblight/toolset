@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "@eslint-kit/base",
+    "@eslint-kit/typescript",
+    "@eslint-kit/prettier"
+  ],
+  "rules": {
+    "import/no-anonymous-default-export": [2, { "allowObject": true }],
+    "@typescript-eslint/ban-ts-comment": "off"
+  },
+  "parser": "@typescript-eslint/parser"
+}

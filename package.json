@@ -1,0 +1,44 @@
+{
+  "name": "@symblight/toolset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^26.0.14",
+    "rfdc": "^1.1.4",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@eslint-kit/eslint-config-base": "^2.1.2",
+    "@eslint-kit/eslint-config-prettier": "^2.0.0",
+    "@eslint-kit/eslint-config-typescript": "^3.1.2",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "jest": "^26.5.3",
+    "prettier": "^2.1.2",
+    "rollup": "^2.32.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-license": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.28.0"
+  }
+}
