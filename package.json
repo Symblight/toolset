@@ -1,6 +1,6 @@
 {
   "name": "@symblight/toolset",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,12 @@
     "test": "jest --watchAll"
   },
   "keywords": [],
-  "author": "",
+  "author": "symblight@gmail.com",
   "license": "ISC",
+  "repository": {
+    "url": "git://github.com/Symblight/toolset.git"
+  },
+  "homepage": "https://github.com/Symblight/toolset",
   "dependencies": {
     "@types/jest": "^26.0.14",
     "rfdc": "^1.1.4",
