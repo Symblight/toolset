@@ -1,4 +1,4 @@
-import { updateIn } from './index'
+import { updateIn } from '../../src'
 
 const user = {
   name: 'Test',

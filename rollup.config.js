@@ -2,7 +2,6 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import alias from '@rollup/plugin-alias'
 import json from '@rollup/plugin-json'
-import image from '@rollup/plugin-image'
 import generatePackageJson from 'rollup-plugin-generate-package-json'
 import license from 'rollup-plugin-license'
 
@@ -37,7 +36,6 @@ export default {
     ...Object.keys(Package.peerDependencies || {}),
   ],
   plugins: [
-    image(),
     alias({
       entries: {
         '~': './src',

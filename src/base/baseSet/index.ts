@@ -8,14 +8,23 @@ interface TStore {
   [key: string]: TStore
 }
 
-export function baseSet(object: TStore, path: unknown[], value: any): unknown {
-  if (Array.isArray(path)) {
-    const clone = rfdc()
-    const nested = clone(object)
-    let current = nested
+export function baseSet(
+  object: TStore,
+  path: unknown[] | string | number,
+  value: any
+): unknown {
+  const clone = rfdc()
+  const nested = clone(object)
+  let current = nested
 
+  if (typeof path === 'string' || typeof path === 'number') {
+    current[path] = value
+    return nested
+  }
+
+  if (Array.isArray(path)) {
     while (path.length > 1) {
-      const [head, ...tail] = path
+      const [head, ...tail] = path as any[]
       path = tail
       if (current[head] === undefined) {
         current[head] = {}

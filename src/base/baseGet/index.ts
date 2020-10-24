@@ -1,6 +1,11 @@
-export function baseGet(store: any, path: unknown[]): any {
+export function baseGet(store: any, path: unknown[] | string | number): any {
+  let currentIndex = 0
+
+  if (typeof path === 'string' || typeof path === 'number') {
+    return store[path]
+  }
+
   if (Array.isArray(path)) {
-    let currentIndex = 0
     const length = path.length
 
     while (store !== null && currentIndex < length) {

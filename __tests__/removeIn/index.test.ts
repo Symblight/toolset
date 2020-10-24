@@ -1,4 +1,4 @@
-import { removeIn } from './index'
+import { removeIn } from '../../src'
 
 const user = {
   name: 'Test',
@@ -38,6 +38,23 @@ const userArray = [
 const arrayTest = ['user', 'admin', 'root']
 
 describe('RemoveIn function', () => {
+  it('remove value in object by string path', () => {
+    const result = removeIn(user, 'name')
+    expect(result).toEqual({
+      age: 26,
+      job: {
+        title: 'Test',
+        type: {
+          name: 'dev',
+          item: 'rest',
+        },
+      },
+    })
+  })
+  it('remove value in object by number from array', () => {
+    const result = removeIn(userArray, 1)
+    expect(result).toEqual([userArray[0]])
+  })
   it('remove key from object', () => {
     const result = removeIn(user, ['job', 'type', 'name'])
     expect(result).toEqual({

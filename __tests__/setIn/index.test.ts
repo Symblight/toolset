@@ -1,8 +1,9 @@
-import { setIn } from './index'
+import { setIn } from '../../src'
 
 const user = {
   name: 'Test',
   age: 26,
+  createAt: new Date('1995-12-17T03:24:00'),
   job: {
     title: 'Test',
     type: {
@@ -38,16 +39,25 @@ const userArray = [
 const arrayTest = ['user', 'admin', 'root']
 
 describe('SetIn function', () => {
+  it('set value in object by string path', () => {
+    const result = setIn(user, 'name', 'Test-5')
+    expect(result).toEqual({
+      ...user,
+      name: 'Test-5',
+    })
+  })
+  it('set value in object by number to array', () => {
+    const result = setIn(userArray, 1, user)
+    expect(result).toEqual([userArray[0], user])
+  })
   it('set value in object', () => {
     const result = setIn(user, ['job', 'type', 'status'], 'online')
     expect(result).toEqual({
-      name: 'Test',
-      age: 26,
+      ...user,
       job: {
-        title: 'Test',
+        ...user.job,
         type: {
-          name: 'dev',
-          item: 'rest',
+          ...user.job.type,
           status: 'online',
         },
       },
@@ -117,6 +127,7 @@ describe('SetIn function', () => {
     expect(result).toEqual({
       name: 'Test',
       age: 26,
+      createAt: new Date('1995-12-17T03:24:00'),
       job: {
         title: 'Test',
         type: {

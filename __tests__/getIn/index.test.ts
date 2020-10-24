@@ -1,4 +1,4 @@
-import { getIn } from './index'
+import { getIn } from '../../src'
 
 const user = {
   name: 'Test',
@@ -37,6 +37,14 @@ const userArray = [
 const arrayTest = ['user', 'admin', 'root']
 
 describe('GetIn function', () => {
+  it('get value in object by string path', () => {
+    const result = getIn(user, 'name')
+    expect(result).toEqual('Test')
+  })
+  it('get value in object by number from array', () => {
+    const result = getIn(userArray, 1)
+    expect(result).toEqual(userArray[1])
+  })
   it('get key from object by path', () => {
     const result = getIn(user, ['job', 'type', 'name'])
     expect(result).toEqual('dev')

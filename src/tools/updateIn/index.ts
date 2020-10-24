@@ -1,4 +1,4 @@
-import { baseSet } from '../baseSet'
+import { baseSet } from '../../base'
 
 export function updateIn(
   object: any,
