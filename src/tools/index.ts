@@ -15,9 +15,9 @@ update(path)
 */
 
 export const t = (): any => {
-  const init = {
-    // getIn(value) {
-    //     return el
-    // },
-  }
+  // const init = {
+  // getIn(value) {
+  //     return el
+  // },
+  //}
 }
